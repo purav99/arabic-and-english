@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معنا | داربيا</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            dark: '#0F0F0F',
+            light: '#F9F9F9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color:#f4f1eb;
+      background-image:
+        linear-gradient(to right, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    #preloader {
+      background: white;
+      color: #D4AF37;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body class="bg-[#f4f1eb] text-dark">
+
+  <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <!-- الشعار -->
+      <div class="flex-shrink-0">
+        <img src="/images/pogo.png" alt="شعار داربيا" class="h-20 w-auto">
+      </div>
+<nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0 space-x-reverse">
+      <a href="index-ar.html" class="hover:text-gold transition">الرئيسية</a>
+      <a href="about-ar.html" class="hover:text-gold transition">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="hover:text-gold transition">المحاسبة والدفاتر</a>
+      <a href="audit-ar.html" class="hover:text-gold transition">التدقيق</a>
+      <a href="taxation-ar.html" class="hover:text-gold transition">الضرائب</a>
+      <a href="compliance-ar.html" class="hover:text-gold transition">الامتثال</a>
+      <a href="other-services-ar.html" class="hover:text-gold transition">خدمات أخرى</a>
+      <a href="contact-ar.html" class="hover:text-gold transition">اتصل بنا</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4 space-x-reverse ml-4 relative">
+      <a href="contact-ar.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">قدم الآن</a>
+      <div class="relative" id="langDropdown">
+        <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
+          🌐 العربية
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="langMenu" class="absolute left-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-right">
+          <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
+          <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+        </div>
+      </div>
+    </div>
+
+      <!-- قائمة الجوال -->
+      <button id="menuToggle" class="md:hidden text-gold focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden px-4 py-4 bg-white border-t border-gold space-y-2">
+      <a href="index-ar.html" class="block text-dark hover:text-gold">الرئيسية</a>
+      <a href="about-ar.html" class="block text-dark hover:text-gold">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="block text-dark hover:text-gold">المحاسبة ومسك الدفاتر</a>
+      <a href="audit-ar.html" class="block text-dark hover:text-gold">التدقيق</a>
+      <a href="taxation-ar.html" class="block text-dark hover:text-gold">الضرائب</a>
+      <a href="compliance-ar.html" class="block text-dark hover:text-gold">الامتثال</a>
+      <a href="other-services-ar.html" class="block text-dark hover:text-gold">خدمات أخرى</a>
+      <a href="contact-ar.html" class="block text-dark hover:text-gold">اتصل بنا</a>
+
+      <!-- تبديل اللغة -->
+      <div class="pt-4 border-t border-gold">
+        <p class="text-sm font-semibold text-dark mb-1">🌐 اللغة</p>
+        <a href="audit.html" class="block text-dark hover:text-gold">English</a>
+        <a href="audit-ar.html" class="block text-dark hover:text-gold">العربية</a>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
+<!-- قسم نموذج الاتصال مع خلفية -->
+<section 
+  dir="rtl"
+  class="relative py-20 px-6 md:px-16 bg-cover bg-center bg-no-repeat" 
+  style="background-image: url('/images/bgconatct2.jpg');"
+>
+  <div class="absolute inset-0 bg-black/50"></div> <!-- التعتيم -->
+  <div class="relative max-w-4xl mx-auto text-center text-white">
+    <h1 class="text-4xl font-bold text-gold mb-6">تواصل معنا</h1>
+    <p class="mb-10">نحن هنا للمساعدة. يرجى ملء النموذج أدناه للتواصل معنا.</p>
+
+    <form 
+      action="https://formspree.io/f/mqkrljzq" 
+      method="POST" 
+      class="space-y-6 bg-[#f4f1eb] text-dark p-8 rounded-xl shadow-lg border border-gold text-right"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input type="text" name="name" placeholder="الاسم الكامل" required class="px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" />
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required class="px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" />
+      </div>
+      <input type="text" name="subject" placeholder="الموضوع" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" />
+      <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا..." required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+      <button type="submit" class="w-full bg-[#3d2c06] text-white py-3 rounded-md font-semibold hover:bg-yellow-600 transition">إرسال الرسالة</button>
+    </form>
+  </div>
+</section>
+
+<!-- معلومات الاتصال -->
+<section dir="rtl" class="py-20 px-6 bg-[#f4f1eb]">
+  <div class="max-w-6xl mx-auto text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#3d2c06]">ابقَ على تواصل معنا</h2>
+    <p class="text-gray-700 text-lg mt-3">
+      تواصل معنا لأي استفسارات أو استشارات أو دعم. نحن هنا لمساعدتك على النمو.
+    </p>
+  </div>
+
+  <!-- بطاقات المعلومات -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+    
+    <!-- بطاقة الهاتف -->
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all">
+      <div class="text-4xl mb-3 text-gold">📞</div>
+      <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">الهاتف</h3>
+      <a href="tel:+971555093068" class="text-dark hover:underline text-lg">+971 55 509 3068</a>
+    </div>
+
+    <!-- بطاقة البريد الإلكتروني -->
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all">
+      <div class="text-4xl mb-3 text-gold">📧</div>
+      <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">البريد الإلكتروني</h3>
+      <a href="mailto:info@darbia.com" class="text-dark hover:underline text-lg">info@darbia.com</a>
+    </div>
+
+    <!-- بطاقة العنوان -->
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all">
+      <div class="text-4xl mb-3 text-gold">📍</div>
+      <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">العنوان</h3>
+      <p class="text-gray-800 text-lg leading-relaxed">
+        الخليج التجاري، دبي<br>الإمارات العربية المتحدة
+      </p>
+    </div>
+  </div>
+
+  <!-- أزرار الاتصال والواتساب -->
+  <div class="text-center flex flex-col sm:flex-row-reverse gap-4 justify-center">
+    <a href="tel:+971555093068" class="inline-block px-6 py-3 bg-gold text-[#3d2c06] font-semibold rounded-full shadow hover:shadow-xl transition">
+      📞 اتصل الآن
+    </a>
+    <a href="https://wa.me/971555093068?text=مرحبًا، أنا مهتم بخدماتكم. هل يمكنكم تزويدي بمزيد من التفاصيل؟" target="_blank" class="inline-block px-6 py-3 bg-green-500 text-[#3d2c06] font-semibold rounded-full shadow hover:shadow-xl transition">
+      💬 واتساب
+    </a>
+  </div>
+</section>
+<!-- لماذا التواصل -->
+<section dir="rtl" class="py-20 px-6 bg-[#f4f1eb] border-t border-gold">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-[#3d2c06] mb-4">لماذا تتواصل مع داربيا؟</h2>
+    <p class="text-gray-700 mb-10">نحن لا نقدم المحاسبة فقط — بل نُعد شركاء في نمو عملك.</p>
+    <div class="grid md:grid-cols-3 gap-8 text-right">
+      <div class="bg-[#f4f1eb] p-6 border border-gold rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">🧾 إرشادات مخصصة</h3>
+        <p class="text-gray-700">حلول مخصصة تناسب احتياجاتك، بدون قوالب جاهزة.</p>
+      </div>
+      <div class="bg-[#f4f1eb] p-6 border border-gold rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">⚖️ تواصل واضح</h3>
+        <p class="text-gray-700">نحرص على البساطة والشفافية في كل خطوة.</p>
+      </div>
+      <div class="bg-[#f4f1eb] p-6 border border-gold rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">🤝 شراكة طويلة الأمد</h3>
+        <p class="text-gray-700">نحن ملتزمون بنجاحك على المدى البعيد.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- قسم الموقع -->
+<section dir="rtl" class="py-16 px-4 bg-[#f4f1eb] text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-[#3d2c06] mb-6 text-center">📍 موقعنا</h2>
+    <div class="rounded-xl overflow-hidden shadow-lg border border-gold">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.8104747188476!2d55.27437757535896!3d25.197201431616034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f433b56d36a1d%3A0xf9c7639fe5b623a2!2sBurj%20Khalifa!5e0!3m2!1sen!2sae!4v1699853821234!5m2!1sen!2sae"
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- قسم الفريق بدون صور -->
+<section dir="rtl" class="py-20 bg-[#f4f1eb]">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h3 class="text-4xl font-bold text-[#3d2c06] mb-4">فريق القيادة لدينا</h3>
+    <div class="underline-gold mb-12"></div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 text-right">
+      
+      <!-- عضو 1 -->
+      <div class="bg-[#f4f1eb] border border-gold rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+        <h4 class="text-2xl font-semibold text-[#3d2c06] mb-2">عبيدة س</h4>
+        <p class="text-gold font-medium mb-4 text-sm uppercase tracking-wide">الشريكة المؤسسة والرئيسة التنفيذية</p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          قائدة ذات رؤية وخبرة تمتد لأكثر من عشر سنوات في الاستشارات المالية، وهياكل الشركات، واستراتيجيات الامتثال. قيادتها تضمن الشفافية والتميّز على جميع المستويات.
+        </p>
+      </div>
+
+      <!-- عضو 2 -->
+      <div class="bg-[#f4f1eb] border border-gold rounded-xl shadow-lg p-8 hover:shadow-2xl transition">
+        <h4 class="text-2xl font-semibold text-[#3d2c06] mb-2">محسن ب س</h4>
+        <p class="text-gold font-medium mb-4 text-sm uppercase tracking-wide">الشريك المؤسس والمدير العام</p>
+        <p class="text-gray-700 text-base leading-relaxed">
+          استراتيجي متميز، متخصص في تحسين الضرائب واستشارات المشاريع الصغيرة والمتوسطة. يتمتع بفهم عميق لأنظمة دول الخليج ويقود الابتكار في الخدمات المالية والنمو التشغيلي.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- قسم الأسئلة الشائعة -->
+<section dir="rtl" class="py-20 px-6 bg-[#f4f1eb] border-t border-gold">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-[#3d2c06] mb-10">الأسئلة الشائعة</h2>
+    <div class="space-y-4 text-right" x-data="{ selected: null }">
+      <div class="border border-gold rounded-lg p-4 cursor-pointer" @click="selected !== 1 ? selected = 1 : selected = null">
+        <h3 class="text-lg font-semibold text-[#3d2c06]">متى يمكنني توقع الرد؟</h3>
+        <p class="mt-2 text-gray-600" x-show="selected === 1" x-transition>نرد عادةً خلال 24 ساعة.</p>
+      </div>
+      <div class="border border-gold rounded-lg p-4 cursor-pointer" @click="selected !== 2 ? selected = 2 : selected = null">
+        <h3 class="text-lg font-semibold text-[#3d2c06]">هل هناك رسوم للاستشارة؟</h3>
+        <p class="mt-2 text-gray-600" x-show="selected === 2" x-transition>لا، أول استشارة مجانية تمامًا.</p>
+      </div>
+      <div class="border border-gold rounded-lg p-4 cursor-pointer" @click="selected !== 3 ? selected = 3 : selected = null">
+        <h3 class="text-lg font-semibold text-[#3d2c06]">هل تخدمون عملاء خارج الإمارات؟</h3>
+        <p class="mt-2 text-gray-600" x-show="selected === 3" x-transition>نعم، نتعامل مع عملاء عالميين من خلال الاستشارات الافتراضية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- وسائل التواصل الاجتماعي -->
+<section dir="rtl" class="py-12 text-center bg-[#f4f1eb] text-white">
+  <h2 class="text-3xl font-bold mb-6 text-[#3d2c06]">تابعنا على</h2>
+  <div class="flex justify-center space-x-reverse space-x-8 text-3xl">
+    <a href="https://www.facebook.com/DaribaAccounting/" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com/dariba_account" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-x"></i>
+    </a>
+    <a href="https://www.instagram.com/dariba_accounting/" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/971555093068" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.youtube.com/@Dariba_Accounting" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+</section>
+
+<!-- التذييل -->
+<footer dir="rtl" class="bg-[#3d2c06] text-white py-6">
+  <div class="max-w-6xl mx-auto text-center text-sm">
+    <p>&copy; 2025 داربيا. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+<!-- Scripts -->
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  const langToggle = document.getElementById('langToggle');
+  const langMenu = document.getElementById('langMenu');
+
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('hidden');
+    });
+
+    document.body.addEventListener('click', () => {
+      langMenu.classList.add('hidden');
+    });
+
+    langMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+</script>
+</body>
+</html>

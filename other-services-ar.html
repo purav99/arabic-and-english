@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داربيا - الخدمات قريبًا</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            dark: '#0F0F0F',
+            light: '#F9F9F9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- التنسيقات المخصصة -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f1eb;
+      background-image: url("https://www.transparenttextures.com/patterns/symphony.png");
+      background-repeat: repeat;
+      background-size: auto;
+    }
+    .underline-gold::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #D4AF37;
+      margin: 8px auto 0;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#f4f1eb] text-dark">
+
+  <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <!-- الشعار -->
+      <div class="flex-shrink-0">
+        <img src="/images/pogo.png" alt="شعار داربيا" class="h-20 w-auto">
+      </div>
+<nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0 space-x-reverse">
+      <a href="index-ar.html" class="hover:text-gold transition">الرئيسية</a>
+      <a href="about-ar.html" class="hover:text-gold transition">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="hover:text-gold transition">المحاسبة والدفاتر</a>
+      <a href="audit-ar.html" class="hover:text-gold transition">التدقيق</a>
+      <a href="taxation-ar.html" class="hover:text-gold transition">الضرائب</a>
+      <a href="compliance-ar.html" class="hover:text-gold transition">الامتثال</a>
+      <a href="other-services-ar.html" class="hover:text-gold transition">خدمات أخرى</a>
+      <a href="contact-ar.html" class="hover:text-gold transition">اتصل بنا</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4 space-x-reverse ml-4 relative">
+      <a href="contact-ar.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">قدم الآن</a>
+      <div class="relative" id="langDropdown">
+        <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
+          🌐 العربية
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="langMenu" class="absolute left-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-right">
+          <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
+          <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+        </div>
+      </div>
+    </div>
+
+      <!-- قائمة الجوال -->
+      <button id="menuToggle" class="md:hidden text-gold focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden px-4 py-4 bg-white border-t border-gold space-y-2">
+      <a href="index-ar.html" class="block text-dark hover:text-gold">الرئيسية</a>
+      <a href="about-ar.html" class="block text-dark hover:text-gold">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="block text-dark hover:text-gold">المحاسبة ومسك الدفاتر</a>
+      <a href="audit-ar.html" class="block text-dark hover:text-gold">التدقيق</a>
+      <a href="taxation-ar.html" class="block text-dark hover:text-gold">الضرائب</a>
+      <a href="compliance-ar.html" class="block text-dark hover:text-gold">الامتثال</a>
+      <a href="other-services-ar.html" class="block text-dark hover:text-gold">خدمات أخرى</a>
+      <a href="contact-ar.html" class="block text-dark hover:text-gold">اتصل بنا</a>
+
+      <!-- تبديل اللغة -->
+      <div class="pt-4 border-t border-gold">
+        <p class="text-sm font-semibold text-dark mb-1">🌐 اللغة</p>
+        <a href="audit.html" class="block text-dark hover:text-gold">English</a>
+        <a href="audit-ar.html" class="block text-dark hover:text-gold">العربية</a>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
+<!-- قسم قيد التنفيذ -->
+<section 
+  dir="rtl"
+  class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center bg-no-repeat relative"
+  style="background-image: url('/images/bdconatct1.jpg');"
+>
+  <div class="absolute inset-0 bg-black/40"></div> <!-- تراكب داكن اختياري للتباين -->
+
+  <div class="relative z-10">
+    <h2 class="text-5xl font-bold text-gold mb-4 underline-gold">خدمات أخرى</h2>
+    <p class="text-white text-lg max-w-xl mb-8">
+      نحن نعمل على توسيع خدماتنا لتقديم الأفضل لكم.  
+      قائمة شاملة بخدماتنا المالية والاستشارية ستكون متاحة قريبًا.
+    </p>
+    <span class="px-6 py-3 bg-[#3d2c06] text-white font-semibold rounded-full shadow hover:shadow-lg transition">
+      قريبًا...
+    </span>
+  </div>
+</section>
+
+<!-- التذييل -->
+<footer dir="rtl" class="bg-[#3d2c06] text-white py-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <p>&copy; 2025 داربيا. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+<!-- Scripts -->
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  const langToggle = document.getElementById('langToggle');
+  const langMenu = document.getElementById('langMenu');
+
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('hidden');
+    });
+
+    document.body.addEventListener('click', () => {
+      langMenu.classList.add('hidden');
+    });
+
+    langMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+</script>
+</body>
+</html>

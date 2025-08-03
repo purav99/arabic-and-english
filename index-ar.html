@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داربيا - خدمات المحاسبة والضرائب</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            dark: '#0F0F0F',
+            light: '#F9F9F9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f1eb;
+      background-image: url("https://www.transparenttextures.com/patterns/symphony.png");
+    }
+    .underline-gold::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #D4AF37;
+      margin: 8px auto 0;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#f4f1eb] text-dark">
+
+<header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50" dir="rtl">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+    <div class="flex-shrink-0">
+      <img src="/images/pogo.png" alt="شعار داربيا" class="h-20 w-auto">
+    </div>
+
+    <nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0 space-x-reverse">
+      <a href="index-ar.html" class="hover:text-gold transition">الرئيسية</a>
+      <a href="about-ar.html" class="hover:text-gold transition">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="hover:text-gold transition">المحاسبة والدفاتر</a>
+      <a href="audit-ar.html" class="hover:text-gold transition">التدقيق</a>
+      <a href="taxation-ar.html" class="hover:text-gold transition">الضرائب</a>
+      <a href="compliance-ar.html" class="hover:text-gold transition">الامتثال</a>
+      <a href="other-services-ar.html" class="hover:text-gold transition">خدمات أخرى</a>
+      <a href="contact-ar.html" class="hover:text-gold transition">اتصل بنا</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4 space-x-reverse ml-4 relative">
+      <a href="contact-ar.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">قدم الآن</a>
+      <div class="relative" id="langDropdown">
+        <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
+          🌐 العربية
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="langMenu" class="absolute left-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-right">
+          <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
+          <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+        </div>
+      </div>
+    </div>
+
+    <button id="menuToggle" class="md:hidden text-gold focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden px-4 py-4 bg-white border-t border-gold space-y-2 text-right">
+    <a href="index-ar.html" class="block text-dark hover:text-gold">الرئيسية</a>
+    <a href="about-ar.html" class="block text-dark hover:text-gold">من نحن</a>
+    <a href="accounting-bookkeeping-ar.html" class="block text-dark hover:text-gold">المحاسبة والدفاتر</a>
+    <a href="audit-ar.html" class="block text-dark hover:text-gold">التدقيق</a>
+    <a href="taxation-ar.html" class="block text-dark hover:text-gold">الضرائب</a>
+    <a href="compliance-ar.html" class="block text-dark hover:text-gold">الامتثال</a>
+    <a href="other-services-ar.html" class="block text-dark hover:text-gold">خدمات أخرى</a>
+    <a href="contact-ar.html" class="block text-dark hover:text-gold">اتصل بنا</a>
+    <div class="pt-4 border-t border-gold">
+      <p class="text-sm font-semibold text-dark mb-1">🌐 اللغة</p>
+      <a href="index.html" class="block text-dark hover:text-gold">English</a>
+      <a href="index-ar.html" class="block text-dark hover:text-gold">العربية</a>
+    </div>
+  </div>
+</header>
+<!-- قسم الترحيب بخلفية متغيرة -->
+<section class="relative min-h-screen flex items-center justify-center bg-white border-t-4 border-gold overflow-hidden">
+  <!-- خلفية عرض الشرائح -->
+  <div id="slideshow" class="absolute inset-0 z-0 bg-cover bg-center transition-all duration-1000"></div>
+
+  <!-- تراكب مظلم -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+
+  <!-- المحتوى -->
+  <div class="relative z-30 max-w-5xl px-6 text-center">
+    <h2 class="text-6xl md:text-7xl font-bold text-gold mb-8 underline underline-offset-8 decoration-gold decoration-4">
+      مرحباً بكم في داربيا
+    </h2>
+    <p class="text-2xl text-white mb-6">
+      شريكك الموثوق في <span class="text-gold font-semibold">المحاسبة</span>،
+      <span class="text-gold font-semibold">الضرائب</span>، و
+      <span class="text-gold font-semibold">الامتثال</span>.
+    </p>
+    <p class="text-lg md:text-xl text-white max-w-3xl mx-auto">
+      في <span class="font-semibold text-gold">داربيا</span>، نقدم حلولاً مالية موثوقة ومخصصة للشركات في الإمارات. من الشركات الناشئة إلى المؤسسات الكبرى، نضمن الدقة والامتثال والنمو الاستراتيجي.
+    </p>
+  </div>
+</section>
+
+<!-- روابط خدمات احترافية -->
+<section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#3d2c06] mb-6">استعرض خدماتنا</h2>
+    <p class="text-gray-700 mb-10 max-w-2xl mx-auto">
+      وصول سريع إلى الخدمات الأساسية التي نقدمها. استكشف حلولاً مخصصة تلبي احتياجات عملك.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- المحاسبة -->
+      <a href="accounting-bookkeeping-ar.html" class="group block bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-gold hover:text-white transition">
+        <div class="text-4xl mb-4 text-gold group-hover:text-white">📒</div>
+        <h3 class="text-xl font-semibold mb-2">المحاسبة</h3>
+        <p class="text-sm">تنظيم السجلات المالية وضمان الامتثال الدائم.</p>
+      </a>
+
+      <!-- التدقيق -->
+      <a href="audit-ar.html" class="group block bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-gold hover:text-white transition">
+        <div class="text-4xl mb-4 text-gold group-hover:text-white">🧾</div>
+        <h3 class="text-xl font-semibold mb-2">التدقيق</h3>
+        <p class="text-sm">تدقيقات مستقلة تعزز الثقة والشفافية.</p>
+      </a>
+
+      <!-- الضرائب -->
+      <a href="taxation-ar.html" class="group block bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-gold hover:text-white transition text-center">
+        <img src="/images/dirham.png" alt="رمز الدرهم" class="w-10 h-10 mx-auto mb-4 group-hover:brightness-200 transition" />
+        <h3 class="text-xl font-semibold mb-2">الضرائب</h3>
+        <p class="text-sm">استشارات ضريبية شاملة وتقديم الإقرارات في الوقت المناسب.</p>
+      </a>
+
+      <!-- الامتثال -->
+      <a href="compliance-ar.html" class="group block bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-gold hover:text-white transition">
+        <div class="text-4xl mb-4 text-gold group-hover:text-white">✔️</div>
+        <h3 class="text-xl font-semibold mb-2">الامتثال</h3>
+        <p class="text-sm">ضمان الامتثال المستمر للأنظمة والقوانين.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+<!-- قسم الخدمات الرئيسية -->
+<section class="relative py-12 bg-[#f4f1eb] overflow-hidden border-t border-gray-100">
+  <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-[#3d2c06] underline-gold tracking-wide">
+    خدماتنا الأساسية
+  </h3>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch px-6 md:px-5">
+
+    <!-- بطاقة خدمة -->
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">المحاسبة الخارجية</h4>
+      <p class="text-gray-700">تبسيط العمليات المالية اليومية وإعداد التقارير من خلال حلول شاملة مخصصة لعملك.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">استشارات ضريبة الشركات</h4>
+      <p class="text-gray-700">ابقَ متوافقاً وقلل من التكاليف من خلال تقديم الاستشارات الضريبية وخطط التقديم المطابقة للوائح الإمارات.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">خدمات الرواتب والموارد البشرية</h4>
+      <p class="text-gray-700">معالجة دقيقة للرواتب، وإدارة الإجازات، واستشارات الموارد البشرية.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">مطابقة الحسابات البنكية</h4>
+      <p class="text-gray-700">إصلاح التراكمات السابقة والتحقق من المعاملات والحفاظ على سجلات مالية نظيفة.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">استشارات وتقديم ضريبة القيمة المضافة</h4>
+      <p class="text-gray-700">التسجيل، تقديم الإقرارات، تحليل الأثر، وتوجيه فوري مبني على نظام ضريبة القيمة المضافة في الإمارات.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">خدمات المدير المالي الافتراضي</h4>
+      <p class="text-gray-700">قيادة مالية استراتيجية دون تكلفة دوام كامل — إعداد الميزانيات، التوقعات، والدعم الاستشاري.</p>
+    </div>
+
+    <!-- خدمات إضافية -->
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">التقارير المالية</h4>
+      <p class="text-gray-700">تقارير دقيقة وفي الوقت المناسب تقدم رؤى واقعية حول أداء أعمالك وتساعد في اتخاذ القرار.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">دعم التدقيق</h4>
+      <p class="text-gray-700">المساعدة أثناء عمليات التدقيق من خلال تحضير الوثائق والتنسيق مع المدققين وضمان سير العمليات بسلاسة.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">خدمات مسك الدفاتر</h4>
+      <p class="text-gray-700">مسك دفاتر يومي أو شهري لضمان دقة وتنظيم السجلات المالية دائماً.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">محاسبة الشركات الناشئة</h4>
+      <p class="text-gray-700">خدمات محاسبية مصممة خصيصاً لمساعدة الشركات الناشئة على إدارة مواردها المالية بكفاءة من اليوم الأول.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">إعداد نظم الرقابة الداخلية</h4>
+      <p class="text-gray-700">تصميم وتنفيذ أنظمة رقابة داخلية فعالة للحد من المخاطر وتحسين الكفاءة التشغيلية.</p>
+    </div>
+
+    <div class="w-full max-w-md flex flex-col justify-between bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all">
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">فحص الصحة المالية</h4>
+      <p class="text-gray-700">تحليل شامل للوضع المالي لتقييم الربحية والتدفق النقدي وتقديم توصيات للتحسين.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- من نحن -->
+<section class="py-20 bg-[#f4f1eb] border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <!-- نص -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#3d2c06] mb-6">من نحن</h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-6">
+        في <span class="font-semibold text-[#3d2c06]">داربيا للحسابات</span>، نحن ملتزمون بتحويل التعقيدات المالية إلى فرص استراتيجية. بعقلية تركز على العميل وخبرة واسعة في المجال، نقدم حلولاً محاسبية موثوقة وشفافة ومخصصة تساعد الشركات من جميع الأحجام في الإمارات على النجاح.
+      </p>
+      <ul class="space-y-3 text-gray-700 text-base">
+        <li>📊 أكثر من <span class="text-[#3d2c06] font-medium">10 سنوات</span> من الخبرة في المجال</li>
+        <li>🌍 نخدم عملاء من قطاعات ومناطق متعددة</li>
+        <li>👨‍💼 فريق متخصص من محترفي المالية المعتمدين</li>
+        <li>🔒 السرية والثقة والامتثال بنسبة 100%</li>
+      </ul>
+    </div>
+
+    <!-- صورة -->
+    <div class="flex justify-center md:justify-end">
+      <img src="/images/account.png" alt="من نحن" class="rounded-2xl shadow-xl max-w-xl w-full">
+    </div>
+  </div>
+</section>
+<!-- لماذا تختارنا -->
+<section class="relative py-20 bg-[#f4f1eb] overflow-hidden border-t border-gray-100">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gold underline-gold tracking-wide">لماذا تختارنا؟</h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch px-6 md:px-5">
+
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all text-center">
+      <div class="text-gold text-4xl mb-4">⭐</div>
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">خبرة موثوقة</h4>
+      <p class="text-gray-700">يقدم خبراؤنا ذوو الخبرة حلولاً مالية دقيقة وموثوقة.</p>
+    </div>
+
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all text-center">
+      <div class="text-gold text-4xl mb-4">📈</div>
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">تركيز على نمو الأعمال</h4>
+      <p class="text-gray-700">نتجاوز الأرقام لمساعدتك في اتخاذ قرارات ذكية لتحقيق نمو مستدام.</p>
+    </div>
+
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all text-center">
+      <div class="text-gold text-4xl mb-4">🔐</div>
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">سرية وأمان</h4>
+      <p class="text-gray-700">نتعامل مع بياناتك المالية الحساسة بأقصى درجات الأمان والثقة.</p>
+    </div>
+
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all text-center">
+      <div class="text-gold text-4xl mb-4">⏱️</div>
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">تسليم في الوقت المحدد</h4>
+      <p class="text-gray-700">نُقدّر وقتك ونلتزم بمواعيد التسليم دائماً.</p>
+    </div>
+
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all text-center">
+      <div class="text-gold text-4xl mb-4">💼</div>
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">حلول مخصصة</h4>
+      <p class="text-gray-700">نفهم احتياجات عملك ونقدم استراتيجيات مخصصة وليس مجرد قوالب.</p>
+    </div>
+
+    <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl transition-all text-center">
+      <div class="text-gold text-4xl mb-4">💬</div>
+      <h4 class="text-xl font-semibold text-[#3d2c06] mb-2">دعم سريع واستجابي</h4>
+      <p class="text-gray-700">تواصل سريع وواضح كلما احتجت إلينا — نحن هنا لخدمتك.</p>
+    </div>
+
+  </div>
+</section>
+<!-- قسم التواصل -->
+<section class="relative py-20 bg-[#f4f1eb] text-center overflow-hidden" dir="rtl">
+  <h3 class="text-3xl font-bold text-[#3d2c06] mb-4 underline-gold">تواصل معنا</h3>
+  <p class="text-gray-700 mb-6">هل تبحث عن دعم مالي احترافي؟ نحن جاهزون لمساعدتك.</p>
+  <a href="contact-ar.html" class="px-6 py-3 bg-[#3d2c06] text-white font-semibold rounded-full shadow hover:shadow-xl transition">
+    اتصل بنا اليوم
+  </a>
+</section>
+
+<!-- التذييل -->
+<footer class="bg-[#3d2c06] text-white py-6" dir="rtl">
+  <div class="max-w-6xl mx-auto text-center">
+    <p>&copy; 2025 داربيا. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- سكريبت القائمة الجوالية -->
+<script>
+  document.getElementById('menuToggle')?.addEventListener('click', () => {
+    document.getElementById('mobileMenu')?.classList.toggle('hidden');
+  });
+</script>
+
+<!-- سكريبت العرض التلقائي للخلفية -->
+<script>
+  const slideshow = document.getElementById('slideshow');
+  const images = [
+    '/images/slide1.jpg',
+    '/images/slide2.jpg',
+    '/images/slide3.jpg',
+    '/images/slide4.jpg',
+    '/images/slide5.jpg'
+  ];
+  let current = 0;
+  function showNextImage() {
+    slideshow.style.backgroundImage = `url('${images[current]}')`;
+    current = (current + 1) % images.length;
+  }
+  if (slideshow) {
+    showNextImage();
+    setInterval(showNextImage, 5000);
+  }
+</script>
+
+<!-- سكريبت زر تغيير اللغة -->
+<script>
+  const langToggle = document.getElementById('langToggle');
+  const langMenu = document.getElementById('langMenu');
+  langToggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langMenu?.classList.toggle('hidden');
+  });
+  document.body.addEventListener('click', () => {
+    langMenu?.classList.add('hidden');
+  });
+  langMenu?.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+</script>
+
+</body>
+</html>

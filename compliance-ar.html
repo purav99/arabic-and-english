@@ -1,0 +1,271 @@
+<!-- صفحة خدمات الامتثال -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>خدمات الامتثال – داربيا</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            dark: '#0F0F0F',
+            light: '#F9F9F9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- أنماط مخصصة -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f1eb;
+    }
+    .underline-gold::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #D4AF37;
+      margin: 8px auto 0;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#f4f1eb] text-dark">
+
+  <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <!-- الشعار -->
+      <div class="flex-shrink-0">
+        <img src="/images/pogo.png" alt="شعار داربيا" class="h-20 w-auto">
+      </div>
+<nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0 space-x-reverse">
+      <a href="index-ar.html" class="hover:text-gold transition">الرئيسية</a>
+      <a href="about-ar.html" class="hover:text-gold transition">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="hover:text-gold transition">المحاسبة والدفاتر</a>
+      <a href="audit-ar.html" class="hover:text-gold transition">التدقيق</a>
+      <a href="taxation-ar.html" class="hover:text-gold transition">الضرائب</a>
+      <a href="compliance-ar.html" class="hover:text-gold transition">الامتثال</a>
+      <a href="other-services-ar.html" class="hover:text-gold transition">خدمات أخرى</a>
+      <a href="contact-ar.html" class="hover:text-gold transition">اتصل بنا</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4 space-x-reverse ml-4 relative">
+      <a href="contact-ar.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">قدم الآن</a>
+      <div class="relative" id="langDropdown">
+        <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
+          🌐 العربية
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="langMenu" class="absolute left-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-right">
+          <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
+          <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+        </div>
+      </div>
+    </div>
+
+      <!-- قائمة الجوال -->
+      <button id="menuToggle" class="md:hidden text-gold focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden px-4 py-4 bg-white border-t border-gold space-y-2">
+      <a href="index-ar.html" class="block text-dark hover:text-gold">الرئيسية</a>
+      <a href="about-ar.html" class="block text-dark hover:text-gold">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="block text-dark hover:text-gold">المحاسبة ومسك الدفاتر</a>
+      <a href="audit-ar.html" class="block text-dark hover:text-gold">التدقيق</a>
+      <a href="taxation-ar.html" class="block text-dark hover:text-gold">الضرائب</a>
+      <a href="compliance-ar.html" class="block text-dark hover:text-gold">الامتثال</a>
+      <a href="other-services-ar.html" class="block text-dark hover:text-gold">خدمات أخرى</a>
+      <a href="contact-ar.html" class="block text-dark hover:text-gold">اتصل بنا</a>
+
+      <!-- تبديل اللغة -->
+      <div class="pt-4 border-t border-gold">
+        <p class="text-sm font-semibold text-dark mb-1">🌐 اللغة</p>
+        <a href="audit.html" class="block text-dark hover:text-gold">English</a>
+        <a href="audit-ar.html" class="block text-dark hover:text-gold">العربية</a>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
+<!-- القسم الرئيسي -->
+<section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-6 md:px-12" style="background-image: url('/images/bgconatct7.jpg');">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 max-w-4xl">
+    <h1 class="text-5xl md:text-6xl font-bold text-gold mb-8 leading-tight">خدمات الامتثال</h1>
+    <p class="text-xl md:text-2xl leading-relaxed mb-4">
+      تأكد من بقاء عملك متوافقًا مع الأطر التنظيمية لدولة الإمارات والمعايير المالية العالمية.
+    </p>
+    <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+      تقدم داربيا دعمًا مخصصًا للامتثال — من أنظمة مكافحة غسل الأموال إلى الحوكمة والتقارير الدولية.
+    </p>
+  </div>
+</section>
+
+<!-- قسم خدمات الامتثال -->
+<section class="py-20 bg-[#f4f1eb] border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#3d2c06] mb-12 text-center">تشمل خدمات الامتثال لدينا</h2>
+
+    <div class="space-y-20 text-gray-800 text-lg leading-relaxed">
+
+      <!-- إعداد امتثال مكافحة غسل الأموال -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="/images/aml.jpg" alt="امتثال مكافحة غسل الأموال" class="w-full rounded-xl shadow-md">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">إعداد امتثال مكافحة غسل الأموال</h3>
+          <p class="text-gray-700 text-lg">نساعد الشركات على وضع أنظمة وسياسات امتثال لمكافحة غسل الأموال وفقًا لمتطلبات القانون الإماراتي، مما يقلل من مخاطر الجرائم المالية ويوفر أساسًا قويًا للامتثال.</p>
+        </div>
+      </div>
+
+      <!-- وثائق اعرف عميلك / العناية الواجبة -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">وثائق اعرف عميلك / العناية الواجبة</h3>
+          <p class="text-gray-700 text-lg">دعم شامل لجمع، وصيانة، والتحقق من وثائق اعرف عميلك (KYC) والعناية الواجبة (CDD) كجزء من الإجراءات التنظيمية.</p>
+        </div>
+        <img src="/images/kyc.jpg" alt="وثائق KYC" class="w-full rounded-xl shadow-md">
+      </div>
+
+      <!-- إطار تقييم المخاطر -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="/images/risk-assessment.jpg" alt="تقييم المخاطر" class="w-full rounded-xl shadow-md">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">إطار تقييم المخاطر</h3>
+          <p class="text-gray-700 text-lg">نساعد في بناء نماذج لتحديد وتقييم وتخفيف المخاطر المالية والتشغيلية والسمعة وفقًا لطبيعة أعمالك والمعايير المعتمدة.</p>
+        </div>
+      </div>
+
+      <!-- استشارات الحوكمة المؤسسية -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">استشارات الحوكمة المؤسسية</h3>
+          <p class="text-gray-700 text-lg">يقدم خبراؤنا إرشادات استراتيجية لتعزيز الحوكمة المؤسسية، وزيادة الشفافية، وضمان الامتثال للوائح لتحقيق النجاح طويل الأجل.</p>
+        </div>
+        <img src="/images/governance.jpg" alt="حوكمة الشركات" class="w-full rounded-xl shadow-md">
+      </div>
+
+      <!-- امتثال ESR -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="/images/esr-compliance.jpg" alt="امتثال ESR" class="w-full rounded-xl shadow-md">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">امتثال ESR</h3>
+          <p class="text-gray-700 text-lg">ندعمك في تحديد التزاماتك، وتجهيز التقارير، وضمان تقديمها بدقة وفي الوقت المحدد للجهات المختصة.</p>
+        </div>
+      </div>
+
+      <!-- تقديم UBO -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">تقديم معلومات المستفيد الحقيقي (UBO)</h3>
+          <p class="text-gray-700 text-lg">المساعدة في إعداد وتقديم تقارير المستفيد الحقيقي وفقًا لمتطلبات وزارة الاقتصاد لضمان الشفافية المؤسسية.</p>
+        </div>
+        <img src="/images/ubo.jpg" alt="تقديم UBO" class="w-full rounded-xl shadow-md">
+      </div>
+
+      <!-- امتثال FATCA / CRS -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="/images/fatca.jpg" alt="امتثال FATCA / CRS" class="w-full rounded-xl shadow-md">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">امتثال FATCA / CRS</h3>
+          <p class="text-gray-700 text-lg">إرشاد ودعم للامتثال لمعايير الشفافية الضريبية العالمية، بما في ذلك اتفاقية FATCA ومعيار CRS للتقارير الدولية.</p>
+        </div>
+      </div>
+
+      <!-- التقارير التنظيمية -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">التقارير التنظيمية</h3>
+          <p class="text-gray-700 text-lg">نقوم بإعداد وتقديم التقارير المطلوبة للجهات التنظيمية مثل المصرف المركزي ووحدة المعلومات المالية لتقليل المخاطر والغرامات.</p>
+        </div>
+        <img src="/images/regulatory-reporting.jpg" alt="التقارير التنظيمية" class="w-full rounded-xl shadow-md">
+      </div>
+
+      <!-- إعداد سياسات الامتثال -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="/images/compliance-policy.jpg" alt="سياسات الامتثال" class="w-full rounded-xl shadow-md">
+        <div>
+          <h3 class="text-2xl font-semibold text-[#3d2c06] mb-2">إعداد سياسات الامتثال</h3>
+          <p class="text-gray-700 text-lg">صياغة أدلة وسياسات امتثال داخلية مخصصة لضمان التوافق القانوني، وتعزيز الرقابة الداخلية، وترسيخ ثقافة المسؤولية.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- قسم الدعوة إلى اتخاذ إجراء -->
+<section dir="rtl" class="relative py-20 bg-[#f4f1eb] text-center overflow-hidden">
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-10 z-0"></div>
+  <div class="relative z-10">
+    <h3 class="text-3xl font-bold text-[#3d2c06] mb-4 underline-gold">ابقَ على اطلاع بالتنظيمات</h3>
+    <p class="text-gray-700 mb-6">دع داربيا تحافظ على قوة أطر الامتثال لديك وتحديثها المستمر.</p>
+    <a href="/contact-ar.html" class="px-6 py-3 bg-[#3d2c06] text-white font-semibold rounded-full shadow hover:shadow-xl transition">
+      تواصل معنا اليوم
+    </a>
+  </div>
+</section>
+
+<!-- التذييل -->
+<footer dir="rtl" class="bg-[#3d2c06] text-white py-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <p>&copy; 2025 داربيا. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  const langToggle = document.getElementById('langToggle');
+  const langMenu = document.getElementById('langMenu');
+
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('hidden');
+    });
+
+    document.body.addEventListener('click', () => {
+      langMenu.classList.add('hidden');
+    });
+
+    langMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+</script>
+</body>
+</html>

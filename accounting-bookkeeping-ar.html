@@ -1,0 +1,345 @@
+<!-- المحاسبة ومسك الدفاتر -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المحاسبة ومسك الدفاتر – داربيا</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            dark: '#0F0F0F',
+            light: '#F9F9F9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f1eb;
+    }
+    .underline-gold::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #D4AF37;
+      margin: 8px auto 0;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#f4f1eb] text-dark">
+
+<header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50" dir="rtl">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+    <div class="flex-shrink-0">
+      <img src="/images/pogo.png" alt="شعار داربيا" class="h-20 w-auto">
+    </div>
+
+    <nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0 space-x-reverse">
+      <a href="index-ar.html" class="hover:text-gold transition">الرئيسية</a>
+      <a href="about-ar.html" class="hover:text-gold transition">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="hover:text-gold transition">المحاسبة والدفاتر</a>
+      <a href="audit-ar.html" class="hover:text-gold transition">التدقيق</a>
+      <a href="taxation-ar.html" class="hover:text-gold transition">الضرائب</a>
+      <a href="compliance-ar.html" class="hover:text-gold transition">الامتثال</a>
+      <a href="other-services-ar.html" class="hover:text-gold transition">خدمات أخرى</a>
+      <a href="contact-ar.html" class="hover:text-gold transition">اتصل بنا</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4 space-x-reverse ml-4 relative">
+      <a href="contact-ar.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">قدم الآن</a>
+      <div class="relative" id="langDropdown">
+        <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
+          🌐 العربية
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="langMenu" class="absolute left-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-right">
+          <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
+          <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menuToggle" class="md:hidden text-gold focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobileMenu" class="hidden md:hidden px-4 py-4 bg-white border-t border-gold space-y-2">
+    <a href="index-ar.html" class="block text-dark hover:text-gold">الرئيسية</a>
+    <a href="about-ar.html" class="block text-dark hover:text-gold">من نحن</a>
+    <a href="accounting-bookkeeping-ar.html" class="block text-dark hover:text-gold">المحاسبة</a>
+    <a href="audit-ar.html" class="block text-dark hover:text-gold">التدقيق</a>
+    <a href="taxation-ar.html" class="block text-dark hover:text-gold">الضرائب</a>
+    <a href="compliance-ar.html" class="block text-dark hover:text-gold">الامتثال</a>
+    <a href="other-services-ar.html" class="block text-dark hover:text-gold">خدمات أخرى</a>
+    <a href="contact-ar.html" class="block text-dark hover:text-gold">اتصل بنا</a>
+
+    <!-- Language Switch -->
+    <div class="pt-4 border-t border-gold">
+      <p class="text-sm font-semibold text-dark mb-1">🌐 اللغة</p>
+      <a href="index.html" class="block text-dark hover:text-gold">English</a>
+      <a href="index-ar.html" class="block text-dark hover:text-gold">العربية</a>
+    </div>
+  </div>
+</header>
+    <!-- قسم الهيرو -->
+<section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-6 md:px-12" style="background-image: url('/images/bgconatct8.jpg');">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 max-w-4xl">
+    <h1 class="text-5xl md:text-6xl font-bold text-gold mb-8 leading-tight">المحاسبة ومسك الدفاتر</h1>
+    <p class="text-xl md:text-2xl leading-relaxed mb-4">
+      قم بتبسيط شؤونك المالية بالدقة والنزاهة.
+    </p>
+    <p class="text-xl md:text-2xl leading-relaxed mb-4">
+      في <span class="text-gold font-semibold">داربيا</span>، نحن لا نقتصر على الأرقام فقط — بل نوفر الوضوح، ونضمن الالتزام باللوائح في دولة الإمارات، وندعم نمو عملك من خلال رؤى مالية استراتيجية.
+    </p>
+    <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+      بدءًا من مسك الدفاتر اليومي إلى إعداد التقارير المالية الكاملة، يساعدك فريقنا الخبير على البقاء منظمًا وجاهزًا للتدقيق، واتخاذ قرارات واثقة.
+    </p>
+  </div>
+</section>
+
+<!-- قسم خدمات المحاسبة ومسك الدفاتر -->
+<section class="py-20 bg-[#f4f1eb] border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#3d2c06] mb-12 text-center">تشمل خدماتنا في المحاسبة ومسك الدفاتر</h2>
+    <div class="space-y-20">
+
+      <!-- صيانة دفتر الأستاذ العام -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/general-ledger.jpg" alt="دفتر الأستاذ العام" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">صيانة دفتر الأستاذ العام</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              تسجيل جميع المعاملات المالية في دفتر الأستاذ لضمان تقارير دقيقة. يضمن فريقنا تصنيف كل عملية خصم وائتمان بشكل صحيح، مما يسمح بتتبع مالي فوري واستعداد دائم للتدقيق.
+              نقوم أيضًا بتنفيذ ضوابط صارمة للمساعدة في اكتشاف التناقضات مبكرًا والحفاظ على الشفافية في السجلات المالية.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- إدارة الحسابات المستحقة الدفع والقبض -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">إدارة الحسابات المستحقة الدفع والقبض</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              إدارة المدفوعات الواردة والصادرة للحفاظ على تدفق نقدي صحي. نقوم بتبسيط تتبع الفواتير، وجدولة المدفوعات، والمتابعات لضمان بقاء عملك في وضع مالي مستقر وإرضاء الموردين.
+              تساعد أدواتنا المؤتمتة في تقليل الأخطاء البشرية وتسريع معالجة المعاملات، مما يساعد عملك في الحفاظ على المرونة المالية.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/accounts-management.jpg" alt="إدارة الحسابات" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+      <!-- التسوية المصرفية -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/bank-reconciliation.jpg" alt="التسوية المصرفية" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">التسوية المصرفية</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              مطابقة السجلات المالية للشركة مع كشوف الحسابات البنكية لضمان الدقة. تساعد هذه العملية في الكشف عن الأخطاء، ومنع الاحتيال، والحفاظ على أساس مالي قوي.
+              تقلل التسوية الدورية من الفروقات وتوفر رؤية أوضح للوضع النقدي في الوقت الفعلي.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- إعداد البيانات المالية -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">إعداد البيانات المالية</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              إعداد التقارير الأساسية مثل الميزانية العمومية، وبيان الأرباح والخسائر، وبيان التدفقات النقدية. تساعد هذه التقارير أصحاب المصلحة على فهم أداء الأعمال ودعم التقديمات التنظيمية.
+              بياناتنا المالية متوافقة مع المعايير المحاسبية الدولية وجاهزة للتدقيق أو عروض مجلس الإدارة.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/financial-statements.jpg" alt="البيانات المالية" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+        </div>
+      </section>
+
+      <!-- معالجة الرواتب -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/payroll.jpg" alt="معالجة الرواتب" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">معالجة الرواتب</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              الحساب الدقيق وصرف رواتب الموظفين والمزايا والخصومات. نضمن الامتثال لقوانين العمل المحلية وتقديم التقارير في الوقت المناسب لتجنب الغرامات والحفاظ على رضا الموظفين.
+              تشمل خدماتنا أيضًا إنشاء كشوف الرواتب، والتقارير القانونية، وإدارة رصيد الإجازات.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- إدارة المخزون والأصول -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">إدارة المخزون والأصول</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              مراقبة وتسجيل المخزون والأصول الثابتة للتحكم في التكاليف وضمان التقييم المناسب. نساعدك على تتبع الاستهلاك، ودورة حياة الأصول، ودوران المخزون لاتخاذ قرارات أفضل.
+              من خلال التتبع الفوري والتنبيهات، يمكن لعملك تجنب نفاد المخزون أو الفائض.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/inventory-assets.jpg" alt="إدارة المخزون" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+        </div>
+      </section>
+
+      <!-- الإغلاق الشهري / ربع السنوي / السنوي -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/closing.jpg" alt="الإغلاق المالي" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">الإغلاق الشهري / ربع السنوي / السنوي</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              إنهاء الحسابات في فترات منتظمة لإعداد التحليلات المالية أو التدقيق. يضمن نهجنا المنهجي مراجعة جميع السجلات وتسويتها وتلخيصها بدقة.
+              نساعد في اكتشاف المخالفات مبكرًا لضمان إغلاق مالي سلس دون مفاجآت.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- مسك الدفاتر المتوافق مع ضريبة القيمة المضافة -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">مسك الدفاتر المتوافق مع ضريبة القيمة المضافة</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              تسجيل المعاملات بما يتماشى مع قوانين ضريبة القيمة المضافة في الإمارات لضمان التقديم السليم والاستعداد للتدقيق. نتولى حسابات الضرائب المدخلة/المخرجة، وحفظ سجلات ضريبة القيمة المضافة، وضمان التقديمات في الوقت المناسب.
+              تضمن عملياتنا أنك دائمًا مستعد للتدقيقات الضريبية بتوثيق دقيق وكامل.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/vat.jpg" alt="مسك الدفاتر لضريبة القيمة المضافة" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+        </div>
+      </section>
+
+      <!-- ترحيل البيانات المالية -->
+      <section class="py-16 bg-[#f4f1eb] border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
+            <img src="/images/data-migration.jpg" alt="ترحيل البيانات" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">ترحيل البيانات المالية</h2>
+            <p class="text-gray-700 text-lg mb-4">
+              نقل البيانات المالية بأمان من الأنظمة القديمة إلى منصات المحاسبة الحديثة. تقلل عملية الترحيل المنهجية لدينا من الأخطاء، وتحمي سلامة البيانات، وتضمن الاستمرارية.
+              نقوم بإجراء تدقيق قبل وبعد الترحيل للتأكد من عدم فقدان أو تكرار أي بيانات.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</section>
+<!-- قسم الدعوة إلى التواصل -->
+<section class="relative py-20 bg-[#f4f1eb] text-center overflow-hidden">
+  <h3 class="text-3xl font-bold text-[#3d2c06] mb-4 underline-gold">هل تحتاج إلى مساعدة في إدارة دفاترك؟</h3>
+  <p class="text-gray-700 mb-6">دع داربيا تهتم بالأرقام بينما تركز أنت على نمو عملك.</p>
+  <a href="contact-ar.html" class="px-6 py-3 bg-[#3d2c06] text-white font-semibold rounded-full shadow hover:shadow-xl transition">
+    تواصل معنا اليوم
+  </a>
+</section>
+</div>
+
+<!-- تذييل الصفحة -->
+<footer class="bg-[#3d2c06] text-white py-6">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <p class="text-sm md:text-base">&copy; 2025 داربيا. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  const langToggle = document.getElementById('langToggle');
+  const langMenu = document.getElementById('langMenu');
+
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('hidden');
+    });
+
+    document.body.addEventListener('click', () => {
+      langMenu.classList.add('hidden');
+    });
+
+    langMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+</script>
+</body>
+</html>
