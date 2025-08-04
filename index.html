@@ -50,46 +50,51 @@
 
   <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <img src="images/pogo.png" alt="Darbia Logo" class="h-20 w-auto">
+        <img src="/images/pogo.png" alt="Dariba Logo" class="h-24 w-auto">
       </div>
 
-      <!-- Desktop Menu -->
-<nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0">
-  <a href="index.html" class="hover:text-gold transition">Home</a>
-  <a href="about.html" class="hover:text-gold transition">About Us</a>
-  <a href="accounting-bookkeeping.html" class="hover:text-gold transition">Accounting & Bookkeeping</a>
-  <a href="audit.html" class="hover:text-gold transition">Auditing</a>
-  <a href="taxation.html" class="hover:text-gold transition">Taxation</a>
-  <a href="compliance.html" class="hover:text-gold transition">Compliance</a>
-  <a href="Other services.html" class="hover:text-gold transition">Other Services</a>
-  <a href="contact.html" class="hover:text-gold transition">Contact</a>
-</nav>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0">
+        <a href="index.html" class="hover:text-gold transition">Home</a>
+        <a href="about.html" class="hover:text-gold transition">About Us</a>
+        <a href="accounting-bookkeeping.html" class="hover:text-gold transition">Accounting & Bookkeeping</a>
+        <a href="audit.html" class="hover:text-gold transition">Auditing</a>
+        <a href="taxation.html" class="hover:text-gold transition">Taxation</a>
+        <a href="compliance.html" class="hover:text-gold transition">Compliance</a>
+        <a href="other-services.html" class="hover:text-gold transition">Other Services</a>
+        <a href="contact.html" class="hover:text-gold transition">Contact</a>
+      </nav>
 
-     <!-- Right: Apply Online + Language Dropdown -->
-<div class="hidden md:flex items-center space-x-4 ml-4 relative">
-  
-  <!-- Apply Online Button -->
-  <a href="contact.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">
-    Apply Online
+      <!-- Right Section: Apply + Language (Compact) -->
+<div class="hidden md:flex items-center space-x-2 ml-2 relative">
+
+  <!-- Apply Now Button (Smaller) -->
+  <a href="contact.html"
+     class="bg-[#3d2c06] text-white font-medium text-xs px-3 py-1.5 rounded-md shadow-sm hover:bg-gold transition-all whitespace-nowrap">
+    Apply Now
   </a>
 
-  <!-- Language Dropdown -->
-  <div class="relative" id="langDropdown">
-    <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
-      🌐 English
-      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <!-- Language Dropdown (Smaller) -->
+  <div class="relative z-40" id="langDropdown">
+    <button id="langToggle"
+            class="bg-[#3d2c06] text-white font-medium text-xs px-3 py-1.5 rounded-md shadow-sm hover:bg-[#bfa335] transition flex items-center gap-1.5">
+      🌐
+      <span>EN</span>
+      <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
       </svg>
     </button>
-    
-    <div id="langMenu" class="absolute right-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50">
-      <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
-      <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+
+    <!-- Dropdown Menu -->
+    <div id="langMenu"
+         class="absolute right-0 mt-2 w-28 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-left">
+      <a href="index.html" class="block px-3 py-2 text-xs text-dark hover:bg-gold hover:text-white transition">English</a>
+      <a href="index-ar.html" class="block px-3 py-2 text-xs text-dark hover:bg-gold hover:text-white transition">العربية</a>
     </div>
   </div>
-
 </div>
 
       <!-- Mobile Menu Toggle -->
@@ -172,7 +177,7 @@
 <a href="taxation.html" class="group block bg-[#f4f1eb] border border-gold rounded-xl p-6 shadow-md hover:shadow-xl hover:bg-gold hover:text-white transition text-center">
   
   <!-- Dirham Symbol Image -->
-  <img src="images/dirham.png" alt="Dirham Symbol" class="w-10 h-10 mx-auto mb-4 group-hover:brightness-200 transition" />
+  <img src="/images/dirham.png" alt="Dirham Symbol" class="w-10 h-10 mx-auto mb-4 group-hover:brightness-200 transition" />
   
   <h3 class="text-xl font-semibold mb-2">Taxation</h3>
   <p class="text-sm">Comprehensive tax advisory & timely return filing.</p>
@@ -284,7 +289,7 @@
 
       <!-- Image / Illustration -->
       <div class="flex justify-center md:justify-end">
-        <img src="images/account.png" alt="About us" class="rounded-2xl shadow-xl max-w-xl w-full">
+        <img src="/images/account.png" alt="About us" class="rounded-2xl shadow-xl max-w-xl w-full">
       </div>
 
     </div>
@@ -363,11 +368,11 @@
   <script>
     const slideshow = document.getElementById('slideshow');
     const images = [
-      'images/slide1.jpg',
-      'images/slide2.jpg',
-      'images/slide3.jpg',
-      'images/slide4.jpg',
-      'images/slide5.jpg'
+      '/images/slide1.jpg',
+      '/images/slide2.jpg',
+      '/images/slide3.jpg',
+      '/images/slide4.jpg',
+      '/images/slide5.jpg'
     ];
     let current = 0;
     function showNextImage() {
@@ -400,7 +405,3 @@
 
 </body>
 </html>
-
-
-
-
