@@ -337,6 +337,16 @@
       document.getElementById('preloader').style.display = 'none';
     });
   </script>
+  <!-- Scripts -->
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
+    });
+
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
   <script>
   const langToggle = document.getElementById('langToggle');
   const langMenu = document.getElementById('langMenu');
@@ -360,4 +370,5 @@
 
 </body>
 </html>
+
 
