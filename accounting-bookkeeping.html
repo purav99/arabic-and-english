@@ -45,49 +45,55 @@
     }
   </style>
 </head>
-<body class="bg-[#f4f1eb] text-dark flex flex-col min-h-screen">
-  <!-- Page Content Wrapper -->
-  <div class="flex-grow">
+<body class="bg-[#f4f1eb] text-dark">
 
-    <!-- Header -->
-    <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
-        <div class="flex-shrink-0">
-          <img src="images/pogo.png" alt="Darbia Logo" class="h-20 w-auto">
-        </div>
-        <nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0">
-          <a href="index.html" class="hover:text-gold transition">Home</a>
-          <a href="about.html" class="hover:text-gold transition">About Us</a>
-          <a href="accounting-bookkeeping.html" class="hover:text-gold transition">Accounting & Bookkeeping</a>
-          <a href="audit.html" class="hover:text-gold transition">Auditing</a>
-          <a href="taxation.html" class="hover:text-gold transition">Taxation</a>
-          <a href="compliance.html" class="hover:text-gold transition">Compliance</a>
-          <a href="Other services.html" class="hover:text-gold transition">Other Services</a>
-          <a href="contact.html" class="hover:text-gold transition">Contact</a>
-        </nav>
-         <!-- Right: Apply Online + Language Dropdown -->
-<div class="hidden md:flex items-center space-x-4 ml-4 relative">
-  
-  <!-- Apply Online Button -->
-  <a href="contact.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">
-    Apply Online
+  <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <img src="/images/pogo.png" alt="Dariba Logo" class="h-24 w-auto">
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0">
+        <a href="index.html" class="hover:text-gold transition">Home</a>
+        <a href="about.html" class="hover:text-gold transition">About Us</a>
+        <a href="accounting-bookkeeping.html" class="hover:text-gold transition">Accounting & Bookkeeping</a>
+        <a href="audit.html" class="hover:text-gold transition">Auditing</a>
+        <a href="taxation.html" class="hover:text-gold transition">Taxation</a>
+        <a href="compliance.html" class="hover:text-gold transition">Compliance</a>
+        <a href="other-services.html" class="hover:text-gold transition">Other Services</a>
+        <a href="contact.html" class="hover:text-gold transition">Contact</a>
+      </nav>
+
+      <!-- Right Section: Apply + Language (Compact) -->
+<div class="hidden md:flex items-center space-x-2 ml-2 relative">
+
+  <!-- Apply Now Button (Smaller) -->
+  <a href="contact.html"
+     class="bg-[#3d2c06] text-white font-medium text-xs px-3 py-1.5 rounded-md shadow-sm hover:bg-gold transition-all whitespace-nowrap">
+    Apply Now
   </a>
 
-  <!-- Language Dropdown -->
-  <div class="relative" id="langDropdown">
-    <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
-      🌐 English
-      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <!-- Language Dropdown (Smaller) -->
+  <div class="relative z-40" id="langDropdown">
+    <button id="langToggle"
+            class="bg-[#3d2c06] text-white font-medium text-xs px-3 py-1.5 rounded-md shadow-sm hover:bg-[#bfa335] transition flex items-center gap-1.5">
+      🌐
+      <span>EN</span>
+      <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
       </svg>
     </button>
-    
-    <div id="langMenu" class="absolute right-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50">
-      <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
-      <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+
+    <!-- Dropdown Menu -->
+    <div id="langMenu"
+         class="absolute right-0 mt-2 w-28 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-left">
+      <a href="index.html" class="block px-3 py-2 text-xs text-dark hover:bg-gold hover:text-white transition">English</a>
+      <a href="index-ar.html" class="block px-3 py-2 text-xs text-dark hover:bg-gold hover:text-white transition">العربية</a>
     </div>
   </div>
-
 </div>
 
       <!-- Mobile Menu Toggle -->
@@ -118,7 +124,7 @@
 </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-6 md:px-12" style="background-image: url('images/bgconatct8.jpg');">
+    <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-6 md:px-12" style="background-image: url('/images/bgconatct8.jpg');">
       <div class="absolute inset-0 bg-black/60"></div>
       <div class="relative z-10 max-w-4xl">
         <h1 class="text-5xl md:text-6xl font-bold text-gold mb-8 leading-tight">Accounting & Bookkeeping</h1>
@@ -149,7 +155,7 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/general-ledger.jpg" alt="General Ledger" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/general-ledger.jpg" alt="General Ledger" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
     <div>
       <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">General Ledger Maintenance</h2>
@@ -173,7 +179,7 @@
     </div>
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/accounts-management.jpg" alt="Accounts Management" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/accounts-management.jpg" alt="Accounts Management" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
   </div>
 </section>
@@ -183,7 +189,7 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/bank-reconciliation.jpg" alt="Bank Reconciliation" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/bank-reconciliation.jpg" alt="Bank Reconciliation" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
     <div>
       <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">Bank Reconciliation</h2>
@@ -207,7 +213,7 @@
     </div>
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/financial-statements.jpg" alt="Financial Statements" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/financial-statements.jpg" alt="Financial Statements" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
   </div>
 </section>
@@ -217,7 +223,7 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/payroll.jpg" alt="Payroll Processing" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/payroll.jpg" alt="Payroll Processing" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
     <div>
       <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">Payroll Processing</h2>
@@ -241,7 +247,7 @@
     </div>
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/inventory-assets.jpg" alt="Inventory Management" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/inventory-assets.jpg" alt="Inventory Management" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
   </div>
 </section>
@@ -251,7 +257,7 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/closing.jpg" alt="Year-End Closing" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/closing.jpg" alt="Year-End Closing" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
     <div>
       <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">Monthly / Quarterly / Year-End Closing</h2>
@@ -275,7 +281,7 @@
     </div>
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/vat.jpg" alt="VAT Bookkeeping" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/vat.jpg" alt="VAT Bookkeeping" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
   </div>
 </section>
@@ -285,7 +291,7 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
     <div class="relative">
   <div class="absolute inset-0 bg-gradient-to-br from-gold/10 to-transparent rounded-xl z-0 shadow-2xl"></div>
-  <img src="images/data-migration.jpg" alt="Data Migration" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
+  <img src="/images/data-migration.jpg" alt="Data Migration" class="rounded-xl shadow-md w-full h-full max-h-[400px] object-cover relative z-10">
 </div>
     <div>
       <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">Financial Data Migration</h2>
@@ -312,48 +318,39 @@
   <!-- Footer -->
   <footer class="bg-[#3d2c06] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="text-sm md:text-base">&copy; 2025 Datiba. All rights reserved.</p>
+      <p class="text-sm md:text-base">&copy; 2025 Dariba. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-<script>
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) preloader.style.display = 'none';
-  });
-
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('preloader')?.style.display = 'none';
     });
-  }
 
+    document.getElementById('menuToggle')?.addEventListener('click', () => {
+      document.getElementById('mobileMenu')?.classList.toggle('hidden');
+    });
+  </script>
+  <script>
   const langToggle = document.getElementById('langToggle');
   const langMenu = document.getElementById('langMenu');
 
-  if (langToggle && langMenu) {
-    langToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      langMenu.classList.toggle('hidden');
-    });
+  // Toggle menu on button click
+  langToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent body click from firing
+    langMenu.classList.toggle('hidden');
+  });
 
-    document.body.addEventListener('click', () => {
-      langMenu.classList.add('hidden');
-    });
+  // Close menu when clicking outside
+  document.body.addEventListener('click', () => {
+    langMenu.classList.add('hidden');
+  });
 
-    langMenu.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-  }
+  // Prevent menu from closing when clicked inside
+  langMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 </script>
+
 </body>
 </html>
-
-
-
-
-
