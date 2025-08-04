@@ -233,7 +233,17 @@
     <p>&copy; 2025 Dariba. All rights reserved.</p>
   </div>
 </footer>
-<script>
+<!-- Scripts -->
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
+    });
+
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+  <script>
   const langToggle = document.getElementById('langToggle');
   const langMenu = document.getElementById('langMenu');
 
@@ -253,7 +263,7 @@
     e.stopPropagation();
   });
 </script>
-
 </body>
 </html>
+
 
