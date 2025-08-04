@@ -72,55 +72,45 @@
 
   <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <img src="images/pogo.png" alt="Darbia Logo" class="h-20 w-auto">
+        <img src="/images/pogo.png" alt="Dariba Logo" class="h-24 w-auto">
       </div>
 
-     <!-- Desktop Menu -->
-<nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0">
-  <a href="index.html" class="hover:text-gold transition">Home</a>
-  <a href="about.html" class="hover:text-gold transition">About Us</a>
-  <a href="accounting-bookkeeping.html" class="hover:text-gold transition">Accounting & Bookkeeping</a>
-  <a href="audit.html" class="hover:text-gold transition">Auditing</a>
-  <a href="taxation.html" class="hover:text-gold transition">Taxation</a>
-  <a href="compliance.html" class="hover:text-gold transition">Compliance</a>
-  <a href="Other services.html" class="hover:text-gold transition">Other Services</a>
-  <a href="contact.html" class="hover:text-gold transition">Contact</a>
-</nav>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0">
+        <a href="index.html" class="hover:text-gold transition">Home</a>
+        <a href="about.html" class="hover:text-gold transition">About Us</a>
+        <a href="accounting-bookkeeping.html" class="hover:text-gold transition">Accounting & Bookkeeping</a>
+        <a href="audit.html" class="hover:text-gold transition">Auditing</a>
+        <a href="taxation.html" class="hover:text-gold transition">Taxation</a>
+        <a href="compliance.html" class="hover:text-gold transition">Compliance</a>
+        <a href="other-services.html" class="hover:text-gold transition">Other Services</a>
+        <a href="contact.html" class="hover:text-gold transition">Contact</a>
+      </nav>
 
-      <!-- Right: Apply Online + Language Dropdown -->
-<div class="hidden md:flex items-center space-x-4 ml-4 relative">
-  
-  <!-- Apply Online Button -->
-  <a href="contact.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">
-    Apply Online
-  </a>
+      <!-- Right Section: Apply + Language (Compact) -->
 
-  <!-- Language Dropdown -->
-  <div class="relative" id="langDropdown">
-    <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
-      🌐 English
-      <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+  <!-- Language Dropdown (Smaller) -->
+  <div class="relative z-40" id="langDropdown">
+    <button id="langToggle"
+            class="bg-[#3d2c06] text-white font-medium text-xs px-3 py-1.5 rounded-md shadow-sm hover:bg-[#bfa335] transition flex items-center gap-1.5">
+      🌐
+      <span>EN</span>
+      <svg class="w-3.5 h-3.5 ml-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
       </svg>
     </button>
-    
-    <div id="langMenu" class="absolute right-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50">
-      <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
-      <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+
+    <!-- Dropdown Menu -->
+    <div id="langMenu"
+         class="absolute right-0 mt-2 w-28 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-left">
+      <a href="index.html" class="block px-3 py-2 text-xs text-dark hover:bg-gold hover:text-white transition">English</a>
+      <a href="index-ar.html" class="block px-3 py-2 text-xs text-dark hover:bg-gold hover:text-white transition">العربية</a>
     </div>
   </div>
-
 </div>
-
-      <!-- Mobile Menu Toggle -->
-      <button id="menuToggle" class="md:hidden text-gold focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
 
     <!-- Mobile Menu -->
 <div id="mobileMenu" class="hidden md:hidden px-4 py-4 bg-white border-t border-gold space-y-2">
@@ -143,7 +133,7 @@
   <!-- Contact Form Section with Background -->
   <section 
     class="relative py-20 px-6 md:px-16 bg-cover bg-center bg-no-repeat" 
-    style="background-image: url('images/bgconatct2.jpg');"
+    style="background-image: url('/images/bgconatct2.jpg');"
   >
     <div class="absolute inset-0 bg-black/50"></div> <!-- Dark overlay -->
     <div class="relative max-w-4xl mx-auto text-center text-white">
@@ -167,51 +157,55 @@
   </section>
 
   <!-- Contact Info: Horizontal Cards Layout -->
-<section class="py-20 px-6 bg-[#f4f1eb]">
-  <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#3d2c06]">Get in Touch</h2>
-    <p class="text-gray-700 text-lg mt-3">
+<section class="pt-16 pb-10 px-6 bg-[#f4f1eb]">
+  <div class="max-w-6xl mx-auto text-center mb-10">
+    <h3 class="text-4xl md:text-5xl font-extrabold text-[#3d2c06] mb-3 leading-tight">
+      Dariba AlHisab Accounting and Bookkeeping L.L.C
+    </h3>
+    <p class="text-gray-700 text-base md:text-lg leading-relaxed">
       Reach out to us for any inquiries, consultations, or support. We're here to help you grow.
     </p>
   </div>
 
   <!-- Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-    
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-4">
+
     <!-- Phone Card -->
     <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all">
-      <div class="text-4xl mb-3 text-gold">📞</div>
-      <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">Phone</h3>
-      <a href="tel:+971555093068" class="text-dark hover:underline text-lg">+971 55 509 3068</a>
+      <div class="text-4xl mb-2 text-gold">📞</div>
+      <h3 class="text-lg font-semibold text-[#3d2c06] mb-1">Phone</h3>
+      <a href="tel:+971555093068" class="text-dark hover:underline text-sm">+971 55 509 3068</a>
     </div>
 
     <!-- Email Card -->
     <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all">
-      <div class="text-4xl mb-3 text-gold">📧</div>
-      <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">Email</h3>
-      <a href="mailto:info@darbia.com" class="text-dark hover:underline text-lg">info@dariba.com</a>
+      <div class="text-4xl mb-2 text-gold">📧</div>
+      <h3 class="text-lg font-semibold text-[#3d2c06] mb-1">Email</h3>
+      <a href="mailto:info@dariba.com" class="text-dark hover:underline text-sm">info@dariba.com</a>
     </div>
 
     <!-- Address Card -->
     <div class="bg-[#f4f1eb] border border-gold rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all">
-      <div class="text-4xl mb-3 text-gold">📍</div>
-      <h3 class="text-xl font-semibold text-[#3d2c06] mb-2">Address</h3>
-      <p class="text-gray-800 text-lg leading-relaxed">
+      <div class="text-4xl mb-2 text-gold">📍</div>
+      <h3 class="text-lg font-semibold text-[#3d2c06] mb-1">Address</h3>
+      <p class="text-gray-800 text-sm leading-relaxed">
         Business Bay, Dubai<br>United Arab Emirates
       </p>
     </div>
-  </div>
 
-  <!-- Call & WhatsApp Buttons -->
-  <div class="text-center flex flex-col sm:flex-row gap-4 justify-center">
-    <a href="tel:+971555093068" class="inline-block px-6 py-3 bg-gold text-[#3d2c06] font-semibold rounded-full shadow hover:shadow-xl transition">
-      📞 Call Us Now
-    </a>
-    <a href="https://wa.me/971555093068?text=Hello%2C%20I%27m%20interested%20in%20your%20services.%20Can%20you%20please%20provide%20more%20details%3F" target="_blank" class="inline-block px-6 py-3 bg-green-500 text-[#3d2c06] font-semibold rounded-full shadow hover:shadow-xl transition">
-      💬 WhatsApp Us
-    </a>
   </div>
 </section>
+
+<!-- Call & WhatsApp Buttons -->
+<div class="flex justify-center gap-4 mt-6 mb-12">
+  <a href="tel:+971555093068" class="bg-[#D4AF37] hover:bg-[#bfa335] text-dark font-semibold px-6 py-2 rounded-full flex items-center gap-2 shadow transition-all">
+    📞 Call Us Now
+  </a>
+  <a href="https://wa.me/971555093068" target="_blank" class="bg-[#25D366] hover:bg-green-600 text-dark font-semibold px-6 py-2 rounded-full flex items-center gap-2 shadow transition-all">
+    💬 WhatsApp Us
+  </a>
+</div>
+
 
   <!-- Why Contact -->
   <section class="py-20 px-6 bg-[#f4f1eb] border-t border-gold">
@@ -305,26 +299,30 @@
   </section>
 
   <!-- Social Media -->
-  <section class="py-12 text-center bg-[#f4f1eb] text-white">
-    <h2 class="text-3xl font-bold mb-6 text-[#3d2c06]">Follow Us</h2>
-    <div class="flex justify-center space-x-8 text-3xl">
-      <a href="https://www.facebook.com/DaribaAccounting/" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://x.com/dariba_account" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
-        <i class="fab fa-x"></i>
-      </a>
-      <a href="https://www.instagram.com/dariba_accounting/" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/971555093068" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://www.youtube.com/@Dariba_Accounting" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-  </section>
+<section class="py-12 text-center bg-[#f4f1eb] text-white">
+  <h2 class="text-3xl font-bold mb-6 text-[#3d2c06]">Follow Us</h2>
+  <div class="flex justify-center space-x-8 text-3xl">
+    <a href="https://www.facebook.com/DaribaAccounting/" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://x.com/dariba_account" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-x"></i>
+    </a>
+    <a href="https://www.instagram.com/dariba_accounting/" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/971555093068" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.youtube.com/@Dariba_Accounting" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/dariba-accounting-services-6936a3377/" target="_blank" class="text-[#3d2c06] hover:text-gold transition duration-300">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="bg-[#3d2c06] text-white py-6">
@@ -333,44 +331,32 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-<script>
-  window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) preloader.style.display = 'none';
-  });
-
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+  <!-- Preloader Script -->
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('preloader').style.display = 'none';
     });
-  }
-
+  </script>
+  <script>
   const langToggle = document.getElementById('langToggle');
   const langMenu = document.getElementById('langMenu');
 
-  if (langToggle && langMenu) {
-    langToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      langMenu.classList.toggle('hidden');
-    });
+  // Toggle menu on button click
+  langToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent body click from firing
+    langMenu.classList.toggle('hidden');
+  });
 
-    document.body.addEventListener('click', () => {
-      langMenu.classList.add('hidden');
-    });
+  // Close menu when clicking outside
+  document.body.addEventListener('click', () => {
+    langMenu.classList.add('hidden');
+  });
 
-    langMenu.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-  }
+  // Prevent menu from closing when clicked inside
+  langMenu.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
 </script>
+
 </body>
 </html>
-
-
-
-
-
