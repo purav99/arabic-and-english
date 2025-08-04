@@ -50,6 +50,265 @@
 <header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50" dir="rtl">
   <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
     <div class="flex-shrink-0">
+      <img src="/images/pogo.png" alt="شعار داربيا" class="h-24 w-auto">
+    </div>
+
+    <nav class="hidden md:flex flex-1 justify-center items-center space-x-4 text-base whitespace-nowrap min-w-0 space-x-reverse">
+      <a href="index-ar.html" class="hover:text-gold transition">الرئيسية</a>
+      <a href="about-ar.html" class="hover:text-gold transition">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="hover:text-gold transition">المحاسبة والدفاتر</a>
+      <a href="audit-ar.html" class="hover:text-gold transition">التدقيق</a>
+      <a href="taxation-ar.html" class="hover:text-gold transition">الضرائب</a>
+      <a href="compliance-ar.html" class="hover:text-gold transition">الامتثال</a>
+      <a href="other-services-ar.html" class="hover:text-gold transition">خدمات أخرى</a>
+      <a href="contact-ar.html" class="hover:text-gold transition">اتصل بنا</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4 space-x-reverse ml-4 relative">
+      <a href="contact-ar.html" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-gold transition">قدم الآن</a>
+      <div class="relative" id="langDropdown">
+        <button id="langToggle" class="bg-[#3d2c06] text-white font-semibold text-sm px-4 py-2 rounded-md shadow hover:bg-[#bfa335] transition flex items-center">
+          🌐 العربية
+          <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div id="langMenu" class="absolute left-0 mt-2 w-32 bg-white border border-gold rounded-md shadow-lg hidden z-50 text-right">
+          <a href="index.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">English</a>
+          <a href="index-ar.html" class="block px-4 py-2 text-sm text-dark hover:bg-gold hover:text-white transition">العربية</a>
+        </div>
+      </div>
+    </div>
+
+      <!-- قائمة الجوال -->
+      <button id="menuToggle" class="md:hidden text-gold focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden px-4 py-4 bg-white border-t border-gold space-y-2">
+      <a href="index-ar.html" class="block text-dark hover:text-gold">الرئيسية</a>
+      <a href="about-ar.html" class="block text-dark hover:text-gold">من نحن</a>
+      <a href="accounting-bookkeeping-ar.html" class="block text-dark hover:text-gold">المحاسبة ومسك الدفاتر</a>
+      <a href="audit-ar.html" class="block text-dark hover:text-gold">التدقيق</a>
+      <a href="taxation-ar.html" class="block text-dark hover:text-gold">الضرائب</a>
+      <a href="compliance-ar.html" class="block text-dark hover:text-gold">الامتثال</a>
+      <a href="other-services-ar.html" class="block text-dark hover:text-gold">خدمات أخرى</a>
+      <a href="contact-ar.html" class="block text-dark hover:text-gold">اتصل بنا</a>
+
+      <!-- تبديل اللغة -->
+      <div class="pt-4 border-t border-gold">
+        <p class="text-sm font-semibold text-dark mb-1">🌐 اللغة</p>
+        <a href="audit.html" class="block text-dark hover:text-gold">English</a>
+        <a href="audit-ar.html" class="block text-dark hover:text-gold">العربية</a>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
+<!-- قسم الهيرو -->
+<section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-white text-center px-6 md:px-12" style="background-image: url('/images/bgconatct2.jpg');">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 max-w-4xl">
+    <h1 class="text-5xl md:text-6xl font-bold text-gold mb-8 leading-tight">التدقيق ودعم التدقيق</h1>
+    <p class="text-xl md:text-2xl leading-relaxed mb-4">
+      ضمان الشفافية والامتثال والثقة في كل تقرير مالي.
+    </p>
+   <p class="text-xl md:text-2xl leading-relaxed mb-4">
+  في <span class="text-gold font-semibold">داربيا</span>، نساعد الشركات في الاستعداد للتدقيقات الداخلية والخارجية، وتحسين الضوابط الداخلية، والامتثال للوائح الإماراتية.
+</p>
+    <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+      نحن لا نقتصر على القوائم — بل نساعد على تحديد المخاطر، وتصحيح القصور، ودعم الاستعداد الكامل للتدقيق.
+    </p>
+  </div>
+</section>
+
+<!-- قسم خدمات التدقيق -->
+<section class="py-20 bg-[#f4f1eb] border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#3d2c06] mb-12 text-center">تشمل خدمات التدقيق ودعم التدقيق لدينا</h2>
+    <div class="space-y-20">
+
+      <section class="py-16 bg-[#f4f1eb]">
+        <div class="max-w-6xl mx-auto px-6 space-y-16">
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <img src="/images/internal-audit.jpg" alt="التدقيق الداخلي" class="rounded-xl shadow-md w-full object-cover">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">دعم التدقيق الداخلي</h2>
+              <p class="text-gray-700 text-lg">مساعدة الشركات في تقييم العمليات الداخلية والمخاطر وآليات الرقابة لتحسين الحوكمة والكفاءة.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">التحضير للتدقيق الخارجي</h2>
+              <p class="text-gray-700 text-lg">نقوم بتنظيم جميع السجلات والوثائق المالية اللازمة لتسهيل التنسيق مع المدققين الخارجيين.</p>
+            </div>
+            <img src="/images/external-audit.jpg" alt="التدقيق الخارجي" class="rounded-xl shadow-md w-full object-cover">
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <img src="/images/statement-review.jpg" alt="مراجعة البيانات" class="rounded-xl shadow-md w-full object-cover">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">مراجعة البيانات المالية</h2>
+              <p class="text-gray-700 text-lg">مراجعة التقارير المالية لضمان الدقة والامتثال قبل تقديمها للجهات الخارجية أو السلطات.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">مساعدة تدقيق الامتثال</h2>
+              <p class="text-gray-700 text-lg">دعم تقييم التزام عملك بالمعايير التنظيمية والسياسات الداخلية وأطر العمل الصناعية.</p>
+            </div>
+            <img src="/images/compliance-audit.jpg" alt="تدقيق الامتثال" class="rounded-xl shadow-md w-full object-cover">
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <img src="/images/operational-audit.jpg" alt="التدقيق التشغيلي" class="rounded-xl shadow-md w-full object-cover">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">التدقيق التشغيلي</h2>
+              <p class="text-gray-700 text-lg">تحليل سير العمل والعمليات لتقييم الكفاءة وتقليل الهدر ودعم تحسين الأداء.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">تقييم المخاطر ومراجعة الضوابط الداخلية</h2>
+              <p class="text-gray-700 text-lg">تحديد المخاطر المالية المحتملة وتقييم قوة وتصميم الضوابط لحماية أصول الشركة.</p>
+            </div>
+            <img src="/images/risk-control.jpg" alt="تقييم المخاطر" class="rounded-xl shadow-md w-full object-cover">
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <img src="/images/forensic-audit.jpg" alt="التدقيق الجنائي" class="rounded-xl shadow-md w-full object-cover">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">دعم التدقيق الجنائي</h2>
+              <p class="text-gray-700 text-lg">المساعدة في التحقيقات المتعلقة بالاحتيال أو الاختلاس من خلال إعداد تقارير تدقيق منظمة.</p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-2xl font-bold text-[#3d2c06] mb-4">تقارير تدقيق للإدارة</h2>
+              <p class="text-gray-700 text-lg">تقديم تقارير تدقيق مفصلة للإدارة توضح الأداء والضوابط والتوصيات الاستراتيجية.</p>
+            </div>
+            <img src="/images/management-audit.jpg" alt="تدقيق الإدارة" class="rounded-xl shadow-md w-full object-cover">
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+</section>
+<!-- قسم النداء للإجراء CTA -->
+<section class="relative py-20 bg-[#f4f1eb] text-center overflow-hidden">
+  <h3 class="text-3xl font-bold text-[#3d2c06] mb-4 underline-gold">دعنا نتولى جاهزيتك للتدقيق</h3>
+  <p class="text-gray-700 mb-6">تواصل مع داربيا اليوم لتعزيز عملية التدقيق وضمان الامتثال الكامل.</p>
+  <a href="contact-ar.html" class="px-6 py-3 bg-[#3d2c06] text-white font-semibold rounded-full shadow hover:shadow-xl transition">
+    تواصل معنا الآن
+  </a>
+</section>
+
+<!-- التذييل -->
+<footer class="bg-[#3d2c06] text-white py-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <p>&copy; 2025 داربيا. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) preloader.style.display = 'none';
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  const langToggle = document.getElementById('langToggle');
+  const langMenu = document.getElementById('langMenu');
+
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('hidden');
+    });
+
+    document.body.addEventListener('click', () => {
+      langMenu.classList.add('hidden');
+    });
+
+    langMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+</script>
+
+</body>
+</html>
+<!-- صفحة التدقيق -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>التدقيق - داربيا</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            dark: '#0F0F0F',
+            light: '#F9F9F9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- أنماط مخصصة -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f1eb;
+    }
+    .underline-gold::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #D4AF37;
+      margin: 8px auto 0;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-[#f4f1eb] text-dark">
+
+<header class="bg-[#f4f1eb] text-dark shadow-md sticky top-0 z-50" dir="rtl">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+    <div class="flex-shrink-0">
       <img src="images/pogo.png" alt="شعار داربيا" class="h-20 w-auto">
     </div>
 
@@ -257,5 +516,6 @@
 
 </body>
 </html>
+
 
 
